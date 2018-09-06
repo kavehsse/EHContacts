@@ -1,0 +1,25 @@
+{
+  "Logging": {
+    "IncludeScopes": false,
+    "Debug": {
+      "LogLevel": {
+        "Default": "Warning"
+      }
+    },
+    "Console": {
+      "LogLevel": {
+        "Default": "Warning"
+      }
+    }
+  }
+ ,
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "ContactsDb": "Server=(localdb)\\mssqllocaldb;Database=ContactsDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Tokens": {
+    "Key": "{48A62B77-5BB4-4F38-9EA2-D41BA446C159}",
+    "Issuer": "http://localhost:51156",
+    "Audience": "users"
+  }
+}
