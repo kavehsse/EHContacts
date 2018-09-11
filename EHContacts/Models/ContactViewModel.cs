@@ -17,18 +17,21 @@ namespace EHContacts.Models
         };
 
         public int Id { get; set; }
-        [Required(ErrorMessage = "Contact first name is required")]
+        [Required(ErrorMessage = "Contact first name is required.")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Contact last name is required")]
+        [Required(ErrorMessage = "Contact last name is required.")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Contact email is required")]
+        [Required(ErrorMessage = "Contact email is required.")]
+        [EmailAddress(ErrorMessage = "Contact email address is invalid.")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Contact phone number is required")]
+        [Phone(ErrorMessage = "Contact phone number is invalid")]
+        [Required(ErrorMessage = "Contact phone number is required.")]
         public string PhoneNumber { get; set; }
 
+        [Required(ErrorMessage = "Contact status is required.")]
         [JsonConverter(typeof(StringEnumConverter))]
         public ContactStatus Status { get; set; }
 

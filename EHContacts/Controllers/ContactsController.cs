@@ -159,7 +159,7 @@ namespace EHContacts.Controllers
             _repository.DeleteContact(contact);
             _repository.Save();
 
-            return Ok(contact);
+            return Ok(_mapper.Map<Contact, ContactViewModel>(contact));
         }
 
 
